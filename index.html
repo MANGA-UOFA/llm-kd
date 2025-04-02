@@ -1,10 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Welcome to My GitHub Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conference Tutorial</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .abstract {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+      margin-bottom: 2rem;
+    }
+
+    .abstract h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+
+    .speakers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .speaker {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      max-width: 300px;
+      text-align: center;
+      padding: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .speaker img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .speaker h2 {
+      margin: 0.5rem 0 0.25rem;
+      font-size: 1.2rem;
+    }
+
+    .speaker p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .resources {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    }
+
+    .resources h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+
+    .resources ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .resources li {
+      margin-bottom: 0.5rem;
+    }
+
+    .resources a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    .resources a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .speakers {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello World!</h1>
-  <p>This is my GitHub Page.</p>
+
+  <header>
+    <h1>NAACL'25 Tutorial: Knowledge Distillation for Language Models</h1>
+  </header>
+
+  <section class="abstract">
+    <h2>Tutorial Abstract</h2>
+    <p>
+      Knowledge distillation (KD) aims to transfer the knowledge of a <em>teacher</em> (usually a large model)  to a <em>student</em> (usually a small one).
+      In this tutorial, our goal is to provide participants with a comprehensive understanding of the techniques and applications of KD for language models.
+      After introducing the basic concepts including intermediate-layer matching and prediction matching, we will present advanced techniques such as reinforcement learning-based KD and multi-teacher distillation.
+      For applications, we will focus on KD for large language models (LLMs), covering topics ranging from LLM sequence compression to LLM self-distillation.
+      The target audience is expected to know the basics of machine learning and NLP, but do not have to be familiar with the details of math derivation and neural models.
+    </p>
+
+    <p>
+      <strong>Location</strong>: Ballroom A, The Albuquerque Convention Center
+    </p>
+
+    <p>
+      <strong>Time</strong>: Saturday, May 3, 2025; 9:00 AM -- 12:30 PM
+    </p>
+
+
+  </section>
+
+  <section class="speakers">
+    <div class="speaker">
+      <img src="assets/yuqiao_headshot.jpg" alt="Speaker 1">
+      <h2>Yuqiao Wen</h2>
+      <p>
+        Yuqiao is currently a third-year PhD student at the Department of Computing Science, University of Alberta, after having his MSc in 2022 and BSc in 2020.
+        Yuqiao's research lies in developing efficient methods for large language models and making them more accessible for everyone;
+        he has a focus on machine learning problems in knowledge distillation such as label bias and exposure bias.
+        He has published a number of papers at top-tier venues such as AAAI, ACL, and ICLR, including one winning an Area Chair's Award.
+        He was a co-presenter of a three-hour tutorial at the Amii Upper Bound Conference.
+      </p>
+    </div>
+
+    <div class="speaker">
+      <img src="https://cs.uwaterloo.ca/~fhs/static/img/freda-02.jpg" alt="Speaker 2">
+      <h2>Freda Shi</h2>
+      <p>
+        Freda is a first-year Assistant Professor in the David R. Cheriton School of Computer Science at the University of Waterloo and a Faculty Member at the Vector Institute.
+        Her research interests are in computational linguistics, natural language processing, and cognitive sciences.
+        She has been working on knowledge distillation for syntactic analysis and multilingualism, with relevant papers published at ACL and ICLR.
+        Her work has been recognized with a Google PhD Fellowship, a Facebook Fellowship Finalist Award, and Best Paper Nominations at ACL 2019, 2021, and 2024.
+        She has served as an Area Chair for conferences such as ACL, EMNLP, and COLM, and as a program committee member or a reviewer for leading journals and conferences in computational linguistics and machine learning, including TACL, TPAMI, ACL, COLING, EMNLP, NAACL, ICLR, ICML, and NeurIPS.
+      </p>
+      <p>
+      </p>
+    </div>
+
+    <div class="speaker">
+      <img src="assets/lili_headshot.png" alt="Speaker 3">
+      <h2>Lili Mou</h2>
+      <p>
+        Lili Mou} is a sixth-year Assistant Professor at the Department of Computing Science, University of Alberta.
+        His main research interest lies in developing novel machine learning methods for NLP tasks;
+        successful examples include tree-based convolutional neural networks, edit-based unsupervised text generation, and an ensemble-then-distill framework for multi-teacher KD.
+        He regularly serves as a Senior Program Committee Member or an Area Chair for AI and NLP conferences, and is an Action Editor for ACL Rolling Review.
+        He is an Amii Fellow and a Canada CIFAR AI Chair, and has received a AAAI New Faculty Highlight Award; he also received an ACL Best Paper Nomination (2019) and ACL Area Chair's Award (2024).
+        Lili has been a co-organizer of the Workshop on Efficient Speech and Natural Language Processing, co-located with NeurIPS during 2021--2023.
+        He presented two conference tutorials at EMNLP-IJCNLP 2019 and ACL 2020.
+      </p>
+    </div>
+  </section>
+
+  <section class="resources">
+    <h2>Presentation & Resources</h2>
+    <ul>
+      <li><a href="https://example.com/slides.pdf" target="_blank">Slides</a></li>
+      <!-- <li><a href="https://example.com/demo" target="_blank">Live Demo Application</a></li>
+      <li><a href="https://github.com/example/repo" target="_blank">GitHub Repository</a></li> -->
+    </ul>
+  </section>
+
 </body>
 </html>
